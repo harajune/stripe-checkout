@@ -1,9 +1,9 @@
-<html>
-
+<html lang='ja'>
 <head>
   <title>
     stripe test
   </title>
+  <meta charset="utf-8" />
 </head>
 
 <body>
@@ -16,21 +16,21 @@
   id="checkout-button-price_1GtWahCTChsEH1VF8hTDLfQX"
   role="link"
 >
-  Checkout
+  応援する(&yen;500)
 </button>
 
 <div id="error-message"></div>
 
 <script>
 (function() {
-  var stripe = Stripe('pk_test_51GsdqZCTChsEH1VFUuqZWKWl9Ixug18YmzI6LmxH0Eytyig1awUHJwmPOMe5BoCjdZ0QojwU5HrB79SBq8dnqdyP00H3d1HWRi');
+  var stripe = Stripe('pk_live_E3LeCeHAdGIGs3CUHo63ajkK00dc2JY5Sz');
 
   var checkoutButton = document.getElementById('checkout-button-price_1GtWahCTChsEH1VF8hTDLfQX');
   checkoutButton.addEventListener('click', function () {
     // When the customer clicks on the button, redirect
     // them to Checkout.
     stripe.redirectToCheckout({
-      lineItems: [{price: 'price_1GtWahCTChsEH1VF8hTDLfQX', quantity: 1}],
+      lineItems: [{price: 'price_1GtOgeCTChsEH1VFqFggbeEV', quantity: 1}],
       mode: 'payment',
       // Do not rely on the redirect to the successUrl for fulfilling
       // purchases, customers may not always reach the success_url after
